@@ -36,6 +36,6 @@ Knowledge Base Context: {context}
 
 Output Requirement:
 A clear, customer-ready message that:
-Provides an accurate and helpful response
-Maintains continuity with earlier messages
-Uses simple, natural language suitable for real customer interactions
+Provides an accurate and helpful response.
+Maintains continuity with earlier messages.
+Uses simple, natural language suitable for real customer interactions.
