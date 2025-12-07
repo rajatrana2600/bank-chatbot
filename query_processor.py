@@ -3,7 +3,6 @@ import random
 import json
 import os
 from gemini_api import get_gemini_response
-from exchange_rate_utils import is_exchange_rate_query, get_exchange_rate_data
 
 # Load categories from JSON file and create optimized lookup
 def load_categories():
@@ -152,12 +151,7 @@ def generate_response(user_query):
   if documents and any(dist <= 0.8 for dist in distances):
     # Format context from the retrieved documents
     kb_context = "\n\n".join([f"Document {i+1}:\n{doc}" for i, doc in enumerate(documents)])
-    
     return get_gemini_response(user_query, kb_context, st.session_state.messages)
-  elif is_exchange_rate_query(user_query) and not is_followup:
-    # Handle exchange rate queries
-    exchange_data = get_exchange_rate_data(user_query)
-    return exchange_data if exchange_data else "Sorry, I couldn't retrieve the exchange rate information at this moment."
   else:
     # No relevant information found in knowledge base
     return "Could you please clarify what you mean? I'll be able to help you better with a little more detail or call Customer support at +91-9876543210"

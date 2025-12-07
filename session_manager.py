@@ -18,11 +18,10 @@ def connect_to_chromadb():
   try:
     # Connect to ChromaDB client
     client = chromadb.CloudClient(
-      api_key='ck-7bD95NuNebzB4NuD8goHvnDrt1GCqfKEbghob6bkRRMS',
-      tenant='f780702a-cea3-4602-b65f-e7f41f6546ec',
-      database='my-project'
+      api_key='ck-57TZ7sdbCW8oK9Jr7Q3awjFZ3UXrvN63RVfnNskBo4Ap',
+      tenant='4382d23a-34eb-4a25-a0ba-1fcbc386a585',
+      database='bank-chatbot'
     )
-
     # Get the existing collection (assumes it already exists)
     collection = client.get_collection(name="knowledge_base")
     st.session_state.collection = collection
