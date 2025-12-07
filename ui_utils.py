@@ -25,7 +25,7 @@ def setup_ui():
 
   # Header section
   st.markdown("<h1 class='header-title'>🏦 Banking Assistant</h1>", unsafe_allow_html=True)
-  st.markdown("<p class='header-subtitle'>Ask questions about accounts, cards, loans, insurance, or investments. Also support exchange rate queries.</p>", unsafe_allow_html=True)
+  st.markdown("<p class='header-subtitle'>Ask questions about accounts, cards, loans, insurance, or investments.</p>", unsafe_allow_html=True)
 
 def display_chat_history():
   """Display the chat message history"""

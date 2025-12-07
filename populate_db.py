@@ -6,11 +6,10 @@ import streamlit as st
 def process_and_populate_collection():
   # Connect to ChromaDB client
   client = chromadb.CloudClient(
-    api_key='ck-7bD95NuNebzB4NuD8goHvnDrt1GCqfKEbghob6bkRRMS',
-    tenant='f780702a-cea3-4602-b65f-e7f41f6546ec',
-    database='my-project'
+    api_key='ck-57TZ7sdbCW8oK9Jr7Q3awjFZ3UXrvN63RVfnNskBo4Ap',
+    tenant='4382d23a-34eb-4a25-a0ba-1fcbc386a585',
+    database='bank-chatbot'
   )
-
   # Check if collection exists, if yes, delete it
   try:
     client.delete_collection(name="knowledge_base")
@@ -29,13 +28,13 @@ def process_and_populate_collection():
 
   # Process all Excel files
   excel_files = [
-    "C:/Users/abhiarora/Downloads/Brand_concierge_KB/BankFAQs_Part1.csv",
-    "C:/Users/abhiarora/Downloads/Brand_concierge_KB/BankFAQs_Part2.csv",
-    "C:/Users/abhiarora/Downloads/Brand_concierge_KB/BankFAQs_Part3.csv",
-    "C:/Users/abhiarora/Downloads/Brand_concierge_KB/BankFAQs_Part4.csv",
-    "C:/Users/abhiarora/Downloads/Brand_concierge_KB/BankFAQs_Part5.csv",
-    "C:/Users/abhiarora/Downloads/Brand_concierge_KB/BankFAQs_Part6.csv",
-    "C:/Users/abhiarora/Downloads/Brand_concierge_KB/BankFAQs_Part7.csv"
+     "C:/Users/Dell/Downloads/knowledge_base/BankFAQs_Part1.csv",
+    "C:/Users/Dell/Downloads/knowledge_base/BankFAQs_Part2.csv",
+    "C:/Users/Dell/Downloads/knowledge_base/BankFAQs_Part3.csv",
+    "C:/Users/Dell/Downloads/knowledge_base/BankFAQs_Part4.csv",
+    "C:/Users/Dell/Downloads/knowledge_base/BankFAQs_Part5.csv",
+    "C:/Users/Dell/Downloads/knowledge_base/BankFAQs_Part6.csv",
+    "C:/Users/Dell/Downloads/knowledge_base/BankFAQs_Part7.csv"
   ]
 
   for file in excel_files:
